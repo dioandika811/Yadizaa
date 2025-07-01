@@ -1,0 +1,112 @@
+nav {
+  background-color: #ffffff;
+  color: #222;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+nav > .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.menu {
+  width: 40%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo > a {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 6px;
+  font-family: "Kanit", sans-serif;
+}
+
+.menu > ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.menu > ul > li > a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.menu > ul > li > a:hover {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+nav > .wrapper > button {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  border: none;
+  background-color: transparent;
+}
+
+nav > .wrapper > button > svg {
+  color: #222;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .menu > ul {
+    display: none;
+  }
+
+  .menu.tampil > ul {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu {
+    text-align: right;
+  }
+
+  nav > .wrapper > button {
+    display: inline;
+  }
+
+  .menu > ul > li {
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .menu > ul > li > a {
+    display: block;
+    padding: 15px 30px;
+    width: 100%;
+    color: #333;
+  }
+
+  .menu > ul > li > a:hover {
+    background-color: #f0f0f0;
+  }
+}
